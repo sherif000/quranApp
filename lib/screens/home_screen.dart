@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:quran/screens/splash_screen/quran_splash_screen.dart';
+import 'package:quran/screens/qibla/qibla.dart';
+import 'package:quran/screens/quran/quran_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -30,9 +32,19 @@ class _HomeScreenState extends State<HomeScreen> {
                   TextButton(
                       style: TextButton.styleFrom(backgroundColor: Colors.white),
                       onPressed: (){
+                      },
+                      child: AutoSizeText(
+                        'مواقيت الصلاة',style: TextStyle(fontSize: 20,color: Colors.black),
+                      )),
+                  SizedBox(
+                    height: (10/375.0)*MediaQuery.of(context).size.height,
+                  ),
+                  TextButton(
+                      style: TextButton.styleFrom(backgroundColor: Colors.white),
+                      onPressed: (){
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const QuranSplashScreen()),
+                          MaterialPageRoute(builder: (context) => const QuranScreen()),
                         );
                       },
                       child: AutoSizeText(
@@ -43,7 +55,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   TextButton(
                       style: TextButton.styleFrom(backgroundColor: Colors.white),
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const Qibla()));
+
+                      },
                       child: AutoSizeText(
                         'قبلة الصلاة',style: TextStyle(fontSize: 20,color: Colors.black),
                       )),

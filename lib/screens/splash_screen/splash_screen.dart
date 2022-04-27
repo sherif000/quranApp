@@ -12,8 +12,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
-      body: AnimatedSplashScreen(splash:'images/images (2).jpg',splashIconSize: MediaQuery.of(context).size.height,
+      body: AnimatedSplashScreen(splash:'images/download.jfif',splashIconSize: 600,
           nextScreen:HomeScreen(),
       backgroundColor: Colors.white,
       ),

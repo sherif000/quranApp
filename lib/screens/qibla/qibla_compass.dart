@@ -23,12 +23,12 @@ class QiblahCompassWidget extends StatelessWidget {
           children: <Widget>[
             Transform.rotate(
               angle: ((qiblahDirection?.direction ?? 0) * (pi / 180) * -1),
-              child:Image.asset('images/compass-map-icon.png'),
+              child:Image.asset('images/compass-map-icon.png',width: 300,height: 300,),
             ),
             Transform.rotate(
               angle: ((qiblahDirection?.qiblah ?? 0) * (pi / 180) * -1),
               alignment: Alignment.center,
-              child:Image.asset('images/images.png') ,
+              child:Image.asset('images/compass-logo-icon-north-arrow-orienteering-vector-32601305.jpg',height: 50,width: 50,) ,
             ),
             Positioned(
               bottom: 8,

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quran/screens/home_screen.dart';
+import 'package:quran/screens/prays_times/prays_times_screen.dart';
 import 'package:quran/screens/qibla/qibla.dart';
 import 'package:quran/screens/quran/quran_screen.dart';
 import 'package:quran/screens/splash_screen/splash_screen.dart';
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-home: QuranScreen(),
+home: SplashScreen(),
     );
   }
 }
